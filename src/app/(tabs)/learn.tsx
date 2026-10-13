@@ -42,11 +42,17 @@ export default function LearnScreen() {
                 >
                  Learn
                 </Text>
-                <MaterialCommunityIcons
-                    name= "magnify"
-                    size= {30}
-                    color= '#1F2933'
-                />
+                <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Search"
+                    onPress = {() => router.push('/learnsearch')}
+                >
+                    <MaterialCommunityIcons
+                        name = "magnify"
+                        size = {30}
+                        color="#1F2933"
+                    />
+                </Pressable>
                 </View>
                 <LearnCard
                     thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
