@@ -1,4 +1,11 @@
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
+import { Pressable } from 'react-native';
+import { router } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import LearnCard from '@/components/learncard';
+import CategoryTab from '@/components/categorytab';
 
 export default function LearnScreen() {
   return (
@@ -37,18 +44,50 @@ export default function LearnScreen() {
                 >
                  Learn
                 </Text>
-                <MaterialCommunityIcons
-                    name= "magnify"
-                    size= {30}
-                    color= '#1F2933'
-                />
+                <Pressable
+                    accessibilityRole="button"
+                    accessibilityLabel="Search"
+                    onPress={() => router.push('/learnsearch')}
+                    className="mt-3 self-start"
+                >
+                    <MaterialCommunityIcons
+                        name= "magnify"
+                        size= {30}
+                        color= '#1F2933'
+                    />
+                </Pressable>
                 </View>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} className="w-full"
+                    contentContainerStyle={{
+                        alignItems: 'center',
+                        gap: 10,
+                    }}
+                >
+
+                    <CategoryTab
+                        accessibilityLabel="all"
+                        name="All"
+                    />
+                    <CategoryTab
+                        accessibilityLabel="basics"
+                        name="Basics"
+                    />
+                    <CategoryTab
+                        accessibilityLabel="symptoms"
+                        name="Symptoms"
+                    />
+                    <CategoryTab
+                        accessibilityLabel="resources"
+                        name="Patient Resources"
+                    />
+                </ScrollView>
                 <LearnCard
                     thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
                     name="What is TED?"
                     accessibilityLabel="What is TED?"
                     description="Helpful information about TED."
                     link="/(tabs)/learn"
+                    category="TED Basics"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/common-symptoms-image.jpg')}
@@ -56,6 +95,7 @@ export default function LearnScreen() {
                     accessibilityLabel="Common Symptoms of TED"
                     description="Learn about the common symptoms of TED."
                     link="/(tabs)/learn"
+                    category="Symptoms & Risks"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/active-vs-inactive-image.jpg')}
@@ -63,6 +103,7 @@ export default function LearnScreen() {
                     accessibilityLabel="Active vs. Inactive TED"
                     description="Learn about the difference between active and inactive TED."
                     link="/(tabs)/learn"
+                    category="TED Basics"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/risk-factors-image.jpg')}
@@ -70,6 +111,7 @@ export default function LearnScreen() {
                     accessibilityLabel="TED Risk Factors"
                     description="Learn about the risk factors associated with TED."
                     link="/(tabs)/learn"
+                    category="Symptoms & Risks"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
@@ -77,6 +119,7 @@ export default function LearnScreen() {
                     accessibilityLabel="TED Lifestyle Considerations"
                     description="Learn about the lifestyle factors that may influence TED."
                     link="/(tabs)/learn"
+                    category="Patient Resources"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/patient-resources-image.jpg')}
@@ -84,6 +127,7 @@ export default function LearnScreen() {
                     accessibilityLabel="TED Patient Resources"
                     description="Look at resources available for TED patients."
                     link="/(tabs)/learn"
+                    category="Patient Resources"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/support-groups-image.jpg')}
@@ -91,6 +135,7 @@ export default function LearnScreen() {
                     accessibilityLabel="TED Support Groups"
                     description="Find support groups for TED patients."
                     link="/(tabs)/learn"
+                    category="Patient Resources"
                 />
               </View>
             </ScrollView>

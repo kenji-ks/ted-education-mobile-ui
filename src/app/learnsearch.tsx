@@ -3,7 +3,7 @@ import {useState} from 'react';
 import { Text, View, ScrollView, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import LearnCard from '../components/LearnCard';
+import LearnCard from '../components/learncard';
 import { router } from 'expo-router';
 
 export default function LearnScreen() {
