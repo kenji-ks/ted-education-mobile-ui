@@ -1,9 +1,4 @@
-import { Text, View, ScrollView, Pressable } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import LearnCard from '../../components/LearnCard';
-import { router } from 'expo-router';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
 
 export default function LearnScreen() {
   return (
@@ -42,17 +37,11 @@ export default function LearnScreen() {
                 >
                  Learn
                 </Text>
-                <Pressable
-                    accessibilityRole="button"
-                    accessibilityLabel="Search"
-                    onPress = {() => router.push('/learnsearch')}
-                >
-                    <MaterialCommunityIcons
-                        name = "magnify"
-                        size = {30}
-                        color="#1F2933"
-                    />
-                </Pressable>
+                <MaterialCommunityIcons
+                    name= "magnify"
+                    size= {30}
+                    color= '#1F2933'
+                />
                 </View>
                 <LearnCard
                     thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
