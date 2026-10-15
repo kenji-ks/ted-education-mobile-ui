@@ -7,7 +7,6 @@ type LearnCardProps ={
     name: string;
     description: string;
     link: Href;
-    category: string;
 };
 
 const LearnCard = (props: LearnCardProps) => {
