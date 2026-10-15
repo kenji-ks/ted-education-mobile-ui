@@ -6,8 +6,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import LearnCard from '@/components/learncard';
 import CategoryTab from '@/components/categorytab';
+import { useState } from 'react';
 
 export default function LearnScreen() {
+  const [selectedCategory, setSelectedCategory] =
+    useState<'all' | 'basics' | 'symptoms' | 'resources' | '' | null>(null);
   return (
     <View className="flex-1 bg-white">
       <StatusBar style="dark" />
@@ -63,32 +66,131 @@ export default function LearnScreen() {
                         gap: 10,
                     }}
                 >
-
-                    <CategoryTab
+                    <Pressable
+                        accessibilityRole="button"
                         accessibilityLabel="all"
-                        name="All"
-                    />
-                    <CategoryTab
-                        accessibilityLabel="basics"
-                        name="Basics"
-                    />
-                    <CategoryTab
-                        accessibilityLabel="symptoms"
-                        name="Symptoms"
-                    />
-                    <CategoryTab
-                        accessibilityLabel="resources"
-                        name="Patient Resources"
-                    />
+                        className="mt-2 min-h-[50px] py-2 flex-row items-center justify-center rounded-2xl active:opacity-80"
+                        onPress={() => {
+                            if (selectedCategory === 'all') {
+                                setSelectedCategory(null);
+                            } else {
+                                setSelectedCategory('all');
+                            }
+                        }}
+                        style={{
+                          backgroundColor: selectedCategory === 'all' ? '#618FA7' : '#F4EFE6',
+                        }}
+                    >
+                        <View className="flex-row items-center justify-between px-4">
+                            <Text
+                                className="text-[20px] font-light"
+                                style={{ 
+                                    fontFamily: 'Georgia',
+                                    fontWeight: '300',
+                                    color: '#1F2933',
+                                }}
+                            >
+                                All
+                            </Text>       
+                        </View>
+                    </Pressable>
+                    <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel="all"
+                        className="mt-2 min-h-[50px] py-2 flex-row items-center justify-center rounded-2xl active:opacity-80"
+                        onPress={() => {
+                            if (selectedCategory === 'basics') {
+                                setSelectedCategory(null);
+                            } else {
+                                setSelectedCategory('basics');
+                            }
+                        }}
+                        style={{
+                          backgroundColor: selectedCategory === 'basics' ? '#618FA7' : '#F4EFE6',
+                        }}
+                    >
+                        <View className="flex-row items-center justify-between px-4">
+                            <Text
+                                className="text-[20px] font-light"
+                                style={{ 
+                                    fontFamily: 'Georgia',
+                                    fontWeight: '300',
+                                    color: '#1F2933',
+                                }}
+                            >
+                                TED Basics
+                            </Text>       
+                        </View>
+                    </Pressable>
+                    <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel="all"
+                        className="mt-2 min-h-[50px] py-2 flex-row items-center justify-center rounded-2xl active:opacity-80"
+                        onPress={() => {
+                            if (selectedCategory === 'symptoms') {
+                                setSelectedCategory(null);
+                            } else {
+                                setSelectedCategory('symptoms');
+                            }
+                        }}
+                        style={{
+                          backgroundColor: selectedCategory === 'symptoms' ? '#618FA7' : '#F4EFE6',
+                        }}
+                    >
+                        <View className="flex-row items-center justify-between px-4">
+                            <Text
+                                className="text-[20px] font-light"
+                                style={{ 
+                                    fontFamily: 'Georgia',
+                                    fontWeight: '300',
+                                    color: '#1F2933',
+                                }}
+                            >
+                                Symptoms & Risks
+                            </Text>       
+                        </View>
+                    </Pressable>
+                    <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel="all"
+                        className="mt-2 min-h-[50px] py-2 flex-row items-center justify-center rounded-2xl active:opacity-80"
+                        onPress={() => {
+                            if (selectedCategory === 'resources') {
+                                setSelectedCategory(null);
+                            } else {
+                                setSelectedCategory('resources');
+                            }
+                        }}
+                        style={{
+                          backgroundColor: selectedCategory === 'resources' ? '#618FA7' : '#F4EFE6',
+                        }}
+                    >
+                        <View className="flex-row items-center justify-between px-4">
+                            <Text
+                                className="text-[20px] font-light"
+                                style={{ 
+                                    fontFamily: 'Georgia',
+                                    fontWeight: '300',
+                                    color: '#1F2933',
+                                }}
+                            >
+                                Patient Resources
+                            </Text>       
+                        </View>
+                    </Pressable>
                 </ScrollView>
-                <LearnCard
-                    thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
-                    name="What is TED?"
-                    accessibilityLabel="What is TED?"
-                    description="Helpful information about TED."
-                    link="/(tabs)/learn"
-                    category="TED Basics"
-                />
+                {(selectedCategory === 'all' || selectedCategory === 'basics') &&
+                    <LearnCard
+                        thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
+                        name="What is TED?"
+                        accessibilityLabel="What is TED?"
+                        description="Helpful information about TED."
+                        link="/(tabs)/learn"
+                        category="TED Basics"
+                    />
+
+                }
+                {(selectedCategory === 'all' || selectedCategory === 'symptoms') &&
                 <LearnCard
                     thumbnail={require('../../../assets/images/common-symptoms-image.jpg')}
                     name="Common Symptoms of TED"
@@ -97,14 +199,18 @@ export default function LearnScreen() {
                     link="/(tabs)/learn"
                     category="Symptoms & Risks"
                 />
-                <LearnCard
+                }
+                {(selectedCategory === 'all' || selectedCategory === 'basics') &&
+                    <LearnCard
                     thumbnail={require('../../../assets/images/active-vs-inactive-image.jpg')}
                     name="Active vs. Inactive TED"
                     accessibilityLabel="Active vs. Inactive TED"
                     description="Learn about the difference between active and inactive TED."
                     link="/(tabs)/learn"
                     category="TED Basics"
-                />
+                    />
+                }
+                {(selectedCategory === 'all' || selectedCategory === 'symptoms') &&
                 <LearnCard
                     thumbnail={require('../../../assets/images/risk-factors-image.jpg')}
                     name="TED Risk Factors"
@@ -113,6 +219,8 @@ export default function LearnScreen() {
                     link="/(tabs)/learn"
                     category="Symptoms & Risks"
                 />
+                }
+                {(selectedCategory === 'all' || selectedCategory === 'resources') &&
                 <LearnCard
                     thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
                     name="TED Lifestyle Considerations"
@@ -121,6 +229,8 @@ export default function LearnScreen() {
                     link="/(tabs)/learn"
                     category="Patient Resources"
                 />
+                }
+                {(selectedCategory === 'all' || selectedCategory === 'resources') &&
                 <LearnCard
                     thumbnail={require('../../../assets/images/patient-resources-image.jpg')}
                     name="TED Patient Resources"
@@ -129,6 +239,8 @@ export default function LearnScreen() {
                     link="/(tabs)/learn"
                     category="Patient Resources"
                 />
+                }
+                {(selectedCategory === 'all' || selectedCategory === 'resources') &&
                 <LearnCard
                     thumbnail={require('../../../assets/images/support-groups-image.jpg')}
                     name="TED Support Groups"
@@ -137,6 +249,7 @@ export default function LearnScreen() {
                     link="/(tabs)/learn"
                     category="Patient Resources"
                 />
+                }
               </View>
             </ScrollView>
           </SafeAreaView>

@@ -1,6 +1,6 @@
 import '../../global.css';
 import {useState} from 'react';
-import { Text, View, ScrollView, Pressable } from 'react-native';
+import { Text, View, ScrollView, Pressable, TextInput } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LearnCard from '../components/learncard';
@@ -34,16 +34,21 @@ export default function LearnScreen() {
                      ˂
                     </Text>
                 </Pressable>
-                <Text
-                    className="flex-1 text-center text-[30px]"
+                <SafeAreaView style={{flex:1, marginHorizontal:20}}>
+                  <TextInput
+                    placeholder="Search"
+                    clearButtonMode="always"
+                    value={query}
+                    onChangeText={setQuery}
                     style={{
-                        fontFamily: 'Georgia',
-                        fontWeight: '500',
-                        color: '#1F2933',
+                      paddingHorizontal: 20,
+                      paddingVertical: 10,
+                      borderWidth: 1,
+                      borderRadius: 10,
+                      borderColor: 'black',
                     }}
-                >
-                 Learn
-                </Text>
+                  />
+                </SafeAreaView>
                 </View>
               </View>
             </ScrollView>
