@@ -50,17 +50,17 @@ export default function HomeScreen() {
                   link="/(tabs)/health"
                 />
                 <HomeFeatureCard
-                  iconname="pill"
-                  name="Treatment"
-                  accessibilityLabel="Treatment"
-                  description="Find available TED treatment options."
-                  link="/treatment"
-                />
-                <HomeFeatureCard
                   iconname="share-variant"
                   name="Share With My Doctor"
                   accessibilityLabel="Share With My Doctor"
                   description="Prepare health information to share with your doctor."
+                  link="/share"
+                />
+                <HomeFeatureCard
+                  iconname="account"
+                  name="My Profile"
+                  accessibilityLabel="My Profile"
+                  description="Change settings or log into your profile."
                   link="/share"
                 />
               </View>
