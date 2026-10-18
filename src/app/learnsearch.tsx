@@ -34,10 +34,13 @@ export default function LearnScreen() {
                      ˂
                     </Text>
                 </Pressable>
-                <SafeAreaView style={{flex:1, marginHorizontal:20}}>
+                <View className="w-full flex-row items-center justify-between px-4">
                   <TextInput
                     placeholder="Search"
+                    placeholderTextColor='#1F2933'
                     clearButtonMode="always"
+                    autoCapitalize='none'
+                    autoCorrect={false}
                     value={query}
                     onChangeText={setQuery}
                     style={{
@@ -46,11 +49,24 @@ export default function LearnScreen() {
                       borderWidth: 1,
                       borderRadius: 10,
                       borderColor: 'black',
+                      flex: 1
                     }}
                   />
-                </SafeAreaView>
+                </View>
+                
                 </View>
               </View>
+                    if(query.trim().toLowerCase() === 'apple'  ){
+                      <LearnCard
+                        thumbnail={require('../../assets/images/what-is-ted-image.jpg')}
+                        name="What is TED?"
+                        accessibilityLabel="What is TED?"
+                        description="Helpful information about TED."
+                        link="/(tabs)/learn"
+                      />
+                    } else {
+                      null
+                    }
             </ScrollView>
           </SafeAreaView>
         </View>
