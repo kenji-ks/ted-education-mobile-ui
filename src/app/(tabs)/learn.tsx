@@ -62,35 +62,35 @@ export default function LearnScreen() {
                     name="What is TED?"
                     accessibilityLabel="What is TED?"
                     description="Helpful information about TED."
-                    link="/(tabs)/learn"
+                    link="/whatisted"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/patient-resources-image.jpg')}
                     name="TED Patient Resources"
                     accessibilityLabel="TED Patient Resources"
                     description="Look at resources available for TED patients."
-                    link="/(tabs)/learn"
+                    link="/tedresources"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/support-groups-image.jpg')}
                     name="TED Support Groups"
                     accessibilityLabel="TED Support Groups"
                     description="Find support groups for TED patients."
-                    link="/(tabs)/learn"
+                    link="/tedsupport"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
                     name="Treatment Options"
                     accessibilityLabel="Treatment Options"
                     description="Find treatment options and medication information for TED."
-                    link="/(tabs)/learn"
+                    link="/treatment"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/risk-factors-image.jpg')}
                     name="Specialties Involved in Treating TED"
                     accessibilityLabel="TED Specialists"
                     description="Find specialists involved in treating TED."
-                    link="/(tabs)/learn"
+                    link="/tedspecialist"
                 />
               </View>
             </ScrollView>
