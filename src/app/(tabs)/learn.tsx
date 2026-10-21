@@ -4,7 +4,7 @@ import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import LearnCard from '@/components/learncard';
+import LearnCard from '@/features/learn/learncard';
 import { useState } from 'react';
 
 export default function LearnScreen() {
@@ -14,32 +14,32 @@ export default function LearnScreen() {
       <View className="flex-1 items-center">
         <View className="w-full max-w-[430px] flex-1 overflow-hidden bg-white">
           <SafeAreaView className="flex-1">
-            <ScrollView>
+            <View>
               <View className="items-start px-7 pt-3">
                 <View className="w-full flex-row items-center justify-between px-4">
                 <Pressable
                     accessibilityRole="button"
                     accessibilityLabel="Back"
                     onPress={() => router.back()}
-                    className="mt-3 self-start"
+                    className="h-10 w-10 items-center justify-center"
                 >
                     <Text
-                        className="text-left flex-1 text-[30px] leading-[25px]"
+                        className="leading-[25px] text-[25px] mt-2"
                         style={{
                             fontFamily: 'Georgia',
                             fontWeight: '500',
-                            color: '#1F2933',
+                            color: '#17395D',
                         }}
                     >
                      ˂
                     </Text>
                 </Pressable>
                 <Text
-                    className="flex-1 text-center text-[30px]"
+                    className="flex-1 text-center text-[25px]"
                     style={{
                         fontFamily: 'Georgia',
-                        fontWeight: '500',
-                        color: '#1F2933',
+                        fontWeight: '400',
+                        color: '#17395D',
                     }}
                 >
                  Learn
@@ -48,12 +48,12 @@ export default function LearnScreen() {
                     accessibilityRole="button"
                     accessibilityLabel="Search"
                     onPress={() => router.push('/learnsearch')}
-                    className="mt-3 self-start"
+                    className="h-10 w-10 items-center justify-center"
                 >
                     <MaterialCommunityIcons
                         name= "magnify"
-                        size= {30}
-                        color= '#1F2933'
+                        size= {27}
+                        color= '#17395D'
                     />
                 </Pressable>
                 </View>
@@ -82,18 +82,18 @@ export default function LearnScreen() {
                     thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
                     name="Treatment Options"
                     accessibilityLabel="Treatment Options"
-                    description="Find treatment options and medication information for TED."
+                    description="Treatment options and medication information."
                     link="/treatment"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/risk-factors-image.jpg')}
-                    name="Specialties Involved in Treating TED"
+                    name="Specialties Treating TED"
                     accessibilityLabel="TED Specialists"
-                    description="Find specialists involved in treating TED."
+                    description=""
                     link="/tedspecialist"
                 />
               </View>
-            </ScrollView>
+            </View>
           </SafeAreaView>
         </View>
       </View>

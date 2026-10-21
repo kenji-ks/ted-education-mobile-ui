@@ -14,7 +14,7 @@ const LearnCard = (props: LearnCardProps) => {
         <Pressable
             accessibilityRole="button"
             accessibilityLabel={props.accessibilityLabel}
-            className=" mt-2 min-h-[100px] w-[100%] py-2 flex-row items-center justify-center rounded-2xl active:opacity-80 border-[#D8E0E4] border-[2px]"
+            className=" mt-2 min-h-[90px] w-[100%] flex-row items-center justify-center rounded-2xl active:opacity-80 border-[#D8E0E4] border-[1px]"
             style={{
                 backgroundColor: '#FFFFFF' 
                   }}
@@ -22,12 +22,14 @@ const LearnCard = (props: LearnCardProps) => {
                 >
                   <View className="w-full flex-row items-center justify-between px-2">
                     <Image 
-                      style={{ width: 100, height: 100, borderRadius: 10 }}
+                      style={{ width: 75, height: 75, borderRadius: 10 }}
                       source = {props.thumbnail}
                     />
                     <View className="flex-col justify-center ml-5 flex-1">
                       <Text
-                        className="text-[25px] font-light"
+                        numberOfLines={1}
+                        adjustsFontSizeToFit
+                        className="text-[20px] font-light"
                         style={{ 
                           fontFamily: 'Georgia',
                           fontWeight: '300',
@@ -37,7 +39,9 @@ const LearnCard = (props: LearnCardProps) => {
                         {props.name}
                       </Text>
                       <Text
-                        className="text-[16px] justify-center"
+                        numberOfLines={1}
+                        adjustsFontSizeToFit
+                        className="text-[14px] justify-center"
                         style={{
                           fontFamily: 'Georgia',
                           fontWeight: '200',
