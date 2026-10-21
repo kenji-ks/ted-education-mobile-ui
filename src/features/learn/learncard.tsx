@@ -41,7 +41,7 @@ const LearnCard = (props: LearnCardProps) => {
                       <Text
                         numberOfLines={1}
                         adjustsFontSizeToFit
-                        className="text-[14px] justify-center"
+                        className="text-[14px] justify-center mt-1"
                         style={{
                           fontFamily: 'Georgia',
                           fontWeight: '200',

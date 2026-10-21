@@ -14,7 +14,7 @@ export default function LearnScreen() {
       <View className="flex-1 items-center">
         <View className="w-full max-w-[430px] flex-1 overflow-hidden bg-white">
           <SafeAreaView className="flex-1">
-            <View>
+            <ScrollView>
               <View className="items-start px-7 pt-3">
                 <View className="w-full flex-row items-center justify-between px-4">
                 <Pressable
@@ -82,18 +82,18 @@ export default function LearnScreen() {
                     thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
                     name="Treatment Options"
                     accessibilityLabel="Treatment Options"
-                    description="Treatment options and medication information."
+                    description="Find treatment options and medications for TED."
                     link="/treatment"
                 />
                 <LearnCard
                     thumbnail={require('../../../assets/images/risk-factors-image.jpg')}
                     name="Specialties Treating TED"
                     accessibilityLabel="TED Specialists"
-                    description=""
+                    description="Find Specialists treating TED."
                     link="/tedspecialist"
                 />
               </View>
-            </View>
+            </ScrollView>
           </SafeAreaView>
         </View>
       </View>

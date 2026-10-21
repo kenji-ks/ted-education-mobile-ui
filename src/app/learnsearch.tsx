@@ -98,7 +98,7 @@ export default function LearnSearchScreen() {
                     thumbnail={require('../../assets/images/lifestyle-considerations-image.jpg')}
                     name="Treatment Options"
                     accessibilityLabel="Treatment Options"
-                    description="Find treatment options and medication information for TED."
+                    description="Find treatment options and medications for TED."
                     link="/treatment"
                   />
                 )}
@@ -108,7 +108,7 @@ export default function LearnSearchScreen() {
                     thumbnail={require('../../assets/images/risk-factors-image.jpg')}
                     name="Specialties Involved in Treating TED"
                     accessibilityLabel="TED Specialists"
-                    description=""
+                    description="Find specialists treating TED."
                     link="/tedspecialist"
                   />
                 )}
