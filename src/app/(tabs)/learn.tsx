@@ -3,9 +3,8 @@ import { Pressable } from 'react-native';
 import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import LearnCard from '@/features/learn/learncard';
-import { useState } from 'react';
+import AppIcon from '@/components/ui/AppIcon';
 
 export default function LearnScreen() {
   return (
@@ -50,10 +49,11 @@ export default function LearnScreen() {
                     onPress={() => router.push('/learnsearch')}
                     className="h-10 w-10 items-center justify-center"
                 >
-                    <MaterialCommunityIcons
-                        name= "magnify"
-                        size= {27}
-                        color= '#17395D'
+                    <AppIcon
+                        iconname='search'
+                        size={25}
+                        color='#17395D'
+                        strokeWidth={2}
                     />
                 </Pressable>
                 </View>
@@ -68,7 +68,7 @@ export default function LearnScreen() {
                     thumbnail={require('../../../assets/images/patient-resources-image.jpg')}
                     name="TED Patient Resources"
                     accessibilityLabel="TED Patient Resources"
-                    description="Look at resources available for TED patients."
+                    description="Look at resources for TED patients."
                     link="/tedresources"
                 />
                 <LearnCard
@@ -82,7 +82,7 @@ export default function LearnScreen() {
                     thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
                     name="Treatment Options"
                     accessibilityLabel="Treatment Options"
-                    description="Find treatment options and medications for TED."
+                    description="Find treatments and medications for TED."
                     link="/treatment"
                 />
                 <LearnCard
