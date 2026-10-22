@@ -22,12 +22,12 @@
                         onPress={() => router.back()}
                         className="h-10 w-10 items-center justify-center"
                     >
-                            <AppIcon
-                                iconname='back'
-                                color='#17395D'
-                                size={25}
-                                strokeWidth={2}
-                            />
+                        <AppIcon
+                            iconname='back'
+                            color='#17395D'
+                            size={25}
+                            strokeWidth={2}
+                        />
                     </Pressable>
                     <Text
                         className="flex-1 text-center text-[25px]"
