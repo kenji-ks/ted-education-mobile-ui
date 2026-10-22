@@ -1,9 +1,10 @@
 import { Search, ArrowRight, ChevronLeft, House, Book, ChartNoAxesColumn, HeartPulse, UserRound, BookBookmark, Activity, Share, BriefcaseMedical, Check} from 'lucide-react-native';
+import type { ColorValue } from "react-native";
 
 type AppIconProps ={
     iconname: keyof typeof icons;
     size: number;
-    color: string;
+    color: ColorValue;
     strokeWidth: number;
 };
 
@@ -15,7 +16,7 @@ const icons = {
     LearnTab: Book, 
     TrackTab: ChartNoAxesColumn, 
     HealthTab: HeartPulse, 
-    ProfileTab: UserRound, 
+    Profile: UserRound, 
     HomeLearn: BookBookmark, 
     HomeTrack: Activity,
     HomeHealth: BriefcaseMedical,
