@@ -6,6 +6,7 @@
     import LearnCard from '@/features/learn/learncard';
     import MainCard from '@/features/learn/maincard';
     import AppIcon from '@/components/ui/AppIcon';
+    import { Articles } from '@/features/learn/data/Articles';
 
     export default function LearnScreen() {
     return (
@@ -60,41 +61,16 @@
                         accessibilityLabel="Understanding Thyroid Eye Disease"
                         link="/whatisted"                    
                     />
-                    <LearnCard
-                        thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
-                        name="What is TED?"
-                        accessibilityLabel="What is TED?"
-                        description="Helpful information about TED."
-                        link="/whatisted"
-                    />
-                    <LearnCard
-                        thumbnail={require('../../../assets/images/patient-resources-image.jpg')}
-                        name="TED Patient Resources"
-                        accessibilityLabel="TED Patient Resources"
-                        description="Look at resources for TED patients."
-                        link="/tedresources"
-                    />
-                    <LearnCard
-                        thumbnail={require('../../../assets/images/support-groups-image.jpg')}
-                        name="TED Support Groups"
-                        accessibilityLabel="TED Support Groups"
-                        description="Find support groups for TED patients."
-                        link="/tedsupport"
-                    />
-                    <LearnCard
-                        thumbnail={require('../../../assets/images/lifestyle-considerations-image.jpg')}
-                        name="Treatment Options"
-                        accessibilityLabel="Treatment Options"
-                        description="Find treatments and medications for TED."
-                        link="/treatment"
-                    />
-                    <LearnCard
-                        thumbnail={require('../../../assets/images/risk-factors-image.jpg')}
-                        name="Specialties Treating TED"
-                        accessibilityLabel="TED Specialists"
-                        description="Find Specialists treating TED."
-                        link="/tedspecialist"
-                    />
+                    {Articles.map((article) => (
+                        <LearnCard
+                            key = {article.key}
+                            thumbnail={article.thumbnail}
+                            name={article.name}
+                            accessibilityLabel={article.accessibilityLabel}
+                            description={article.description}
+                            link={article.link}
+                        />
+                    ))}
                 </View>
                 </ScrollView>
             </SafeAreaView>
