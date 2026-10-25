@@ -57,11 +57,11 @@ return (
                 link="/share"
               />
               <HomeFeatureCard
-                iconname="Profile"
-                name="My Profile"
-                accessibilityLabel="My Profile"
-                description="Change settings or log into your profile."
-                link="/profile"
+                iconname="Treatment"
+                name="Treatment"
+                accessibilityLabel="Treatment"
+                description="Find treatments and other guidance for TED."
+                link="/treatment"
               />
             </View>
           </ScrollView>

@@ -1,7 +1,7 @@
 import { Pressable, Text, View } from 'react-native';
 import { router, Href } from 'expo-router';
 import AppIcon from './ui/AppIcon';
-import { UserRound, BookBookmark, Activity, Share, BriefcaseMedical } from 'lucide-react-native';
+import { Pill, BookBookmark, Activity, Share, BriefcaseMedical } from 'lucide-react-native';
 
 
 type HomeFeatureCardProps ={
@@ -17,7 +17,7 @@ HomeLearn: BookBookmark,
 HomeTrack: Activity,
 HomeHealth: BriefcaseMedical,
 HomeShare: Share,
-Profile: UserRound, 
+Treatment: Pill, 
 }
 
 const HomeFeatureCard = (props: HomeFeatureCardProps) => {

@@ -4,6 +4,7 @@
     import { StatusBar } from 'expo-status-bar';
     import { SafeAreaView } from 'react-native-safe-area-context';
     import LearnCard from '@/features/learn/learncard';
+    import MainCard from '@/features/learn/maincard';
     import AppIcon from '@/components/ui/AppIcon';
 
     export default function LearnScreen() {
@@ -53,6 +54,12 @@
                         />
                     </Pressable>
                     </View>
+                    <MainCard
+                        background={require('../../../assets/images/maincard-image.jpg')}
+                        name={"Understanding\nThyroid Eye Disease"}
+                        accessibilityLabel="Understanding Thyroid Eye Disease"
+                        link="/whatisted"                    
+                    />
                     <LearnCard
                         thumbnail={require('../../../assets/images/what-is-ted-image.jpg')}
                         name="What is TED?"
