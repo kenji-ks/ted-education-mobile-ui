@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import AppIcon from "@/components/ui/AppIcon";
+import AppIcon from "@/components/ui/app-icon";
 
 export default function Layout() {
 return (
@@ -12,7 +12,7 @@ return (
               title: "Home",
               tabBarIcon: ({color}) => (
                 <AppIcon 
-                  iconname="home"
+                  icon="home"
                   size={24}
                   color={color}
                   strokeWidth={2}
@@ -26,7 +26,7 @@ return (
               title: "Learn",
               tabBarIcon: ({color}) => (
                 <AppIcon 
-                  iconname="LearnTab"
+                  icon="LearnTab"
                   size={24}
                   color={color}
                   strokeWidth={2}
@@ -40,7 +40,7 @@ return (
               title: "Track",
               tabBarIcon: ({color}) => (
                 <AppIcon 
-                  iconname="TrackTab"
+                  icon="TrackTab"
                   size={24}
                   color={color}
                   strokeWidth={2}
@@ -54,7 +54,7 @@ return (
               title: "My Health",
               tabBarIcon: ({color}) => (
                 <AppIcon 
-                  iconname="HealthTab"
+                  icon="HealthTab"
                   size={24}
                   color={color}
                   strokeWidth={2}
@@ -68,7 +68,7 @@ return (
               title: "Profile",
               tabBarIcon: ({color}) => (
                 <AppIcon 
-                  iconname="Profile"
+                  icon="Profile"
                   size={24}
                   color={color}
                   strokeWidth={2}

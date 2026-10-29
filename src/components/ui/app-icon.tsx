@@ -1,8 +1,9 @@
 import { Search, ArrowRight, ChevronLeft, House, Pill, Book, ChartNoAxesColumn, HeartPulse, UserRound, BookBookmark, Activity, Share, BriefcaseMedical, Check} from 'lucide-react-native';
 import type { ColorValue } from "react-native";
+export type AppIconName = keyof typeof icons;
 
 type AppIconProps ={
-    iconname: keyof typeof icons;
+    icon: AppIconName;
     size: number;
     color: ColorValue;
     strokeWidth: number;
@@ -26,7 +27,7 @@ const icons = {
 };
 
 const AppIcon = (props: AppIconProps) => {
-    const Icon = icons[props.iconname];
+    const Icon = icons[props.icon];
     return(
         <Icon
             size={props.size}

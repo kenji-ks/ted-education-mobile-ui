@@ -2,7 +2,7 @@ import { ImageSourcePropType } from 'react-native';
 import { Href } from 'expo-router';
 
 export interface ArticleData {
-    key: string;
+    key: number;
     thumbnail: ImageSourcePropType;
     accessibilityLabel: string;
     name: string;
@@ -12,7 +12,7 @@ export interface ArticleData {
 
 export const Articles: ArticleData[] = [
     {
-        key: "What is TED? Helpful information about TED.",
+        key: 1,
         thumbnail: require('../../../../assets/images/what-is-ted-image.jpg'),
         name: "What is TED?",
         accessibilityLabel: "What is TED?",
@@ -20,7 +20,7 @@ export const Articles: ArticleData[] = [
         link: "/whatisted"
     },
     {
-        key: "TED Patient Resources Look at resources for TED patients",
+        key: 2,
         thumbnail: require('../../../../assets/images/patient-resources-image.jpg'),
         name: "TED Patient Resources",
         accessibilityLabel: "TED Patient Resources",
@@ -28,7 +28,7 @@ export const Articles: ArticleData[] = [
         link: "/tedresources"
     },
     {
-        key: "TED Support Groups Find support groups for TED patients.",
+        key: 3,
         thumbnail: require('../../../../assets/images/support-groups-image.jpg'),
         name: "TED Support Groups",
         accessibilityLabel: "TED Support Groups",
@@ -36,7 +36,7 @@ export const Articles: ArticleData[] = [
         link: "/tedsupport"
     },
     {
-        key: "Treatment Options Find treatment options and medications for TED.",
+        key: 4,
         thumbnail: require('../../../../assets/images/lifestyle-considerations-image.jpg'),
         name: "Treatment Options",
         accessibilityLabel: "Treatment Options",
@@ -44,7 +44,7 @@ export const Articles: ArticleData[] = [
         link: "/treatment"
     },
     {
-        key: "Specialties Treating TED Find Specialists treating TED.",
+        key: 5,
         thumbnail: require('../../../../assets/images/risk-factors-image.jpg'),
         name: "Specialties Treating TED",
         accessibilityLabel: "TED Specialists",

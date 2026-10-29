@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LearnCard from '@/features/learn/learncard';
 import MainCard from '@/features/learn/maincard';
-import AppIcon from '@/components/ui/AppIcon';
+import AppIcon from '@/components/ui/app-icon';
 import { Articles } from '@/features/learn/data/Articles';
 
 export default function LearnScreen() {

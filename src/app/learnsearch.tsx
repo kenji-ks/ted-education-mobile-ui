@@ -5,14 +5,14 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LearnCard from '@/features/learn/learncard';
 import { router } from 'expo-router';
-import AppIcon from '@/components/ui/AppIcon';
+import AppIcon from '@/components/ui/app-icon';
 import { Articles } from '@/features/learn/data/Articles';
 
 export default function LearnSearchScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [submittedQuery, setSubmittedQuery] = useState('');
   const words = submittedQuery.toLowerCase().split(" ").filter(Boolean);
-  const matching = Articles.filter((article) => words.every((word) => article.key.toLowerCase().split(" ").some((wordbeg) => wordbeg.startsWith(word))));
+  const matching = Articles.filter((article) => words.every((word) => [article.name, article.description].join(' ').toLowerCase().split(" ").some((wordbeg) => wordbeg.startsWith(word))));
   return (
     <View className="flex-1 bg-white">
       <StatusBar style="dark" />
@@ -29,7 +29,7 @@ export default function LearnSearchScreen() {
                     className="h-10 w-8 items-center justify-center"
                   >
                     <AppIcon
-                      iconname='back'
+                      icon='back'
                       color='#1F2933'
                       size={30}
                       strokeWidth={2}
@@ -42,7 +42,12 @@ export default function LearnSearchScreen() {
                     autoCapitalize='none'
                     autoCorrect={false}
                     value={searchQuery}
-                    onChangeText={setSearchQuery}
+                    onChangeText={(text) => {
+                      setSearchQuery(text);
+                      if (text === '') {
+                        setSubmittedQuery("");
+                      }
+                    }}
                     onSubmitEditing={() => setSubmittedQuery(searchQuery.toLowerCase())}
                     style={{
                       flex: 1,

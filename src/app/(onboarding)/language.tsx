@@ -3,7 +3,7 @@ import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import AppIcon from '@/components/ui/AppIcon';
+import AppIcon from '@/components/ui/app-icon';
 
 export default function LanguageScreen() {
 const [selectedLanguage, setSelectedLanguage] =
@@ -22,7 +22,7 @@ return (
               className="mt-3 self-start"
             >
               <AppIcon 
-                iconname='back'
+                icon='back'
                 size={30}
                 color={'#2e5a90'}
                 strokeWidth={2}
@@ -76,7 +76,7 @@ return (
                 </Text>
                 {selectedLanguage === 'en' && (
               <AppIcon 
-                iconname='select'
+                icon='select'
                 size={25}
                 color={'#2e5a90'}
                 strokeWidth={3}
@@ -110,7 +110,7 @@ return (
                 </Text>
                 {selectedLanguage === 'zh' &&
               <AppIcon 
-                iconname='select'
+                icon='select'
                 size={25}
                 color={'#2e5a90'}
                 strokeWidth={3}
@@ -142,7 +142,7 @@ return (
                 </Text>
                 {selectedLanguage === 'jp' &&
               <AppIcon 
-                iconname='select'
+                icon='select'
                 size={25}
                 color={'#2e5a90'}
                 strokeWidth={3}
@@ -174,7 +174,7 @@ return (
                 </Text>
                 {selectedLanguage === 'kr' &&
                                 <AppIcon 
-                iconname='select'
+                icon='select'
                 size={25}
                 color={'#2e5a90'}
                 strokeWidth={3}
@@ -206,7 +206,7 @@ return (
                 </Text>
                 {selectedLanguage === 'es' &&
               <AppIcon 
-                iconname='select'
+                icon='select'
                 size={25}
                 color={'#2e5a90'}
                 strokeWidth={3}

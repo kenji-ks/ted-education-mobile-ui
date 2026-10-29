@@ -1,24 +1,14 @@
 import { Pressable, Text, View } from 'react-native';
 import { router, Href } from 'expo-router';
-import AppIcon from './ui/AppIcon';
-import { Pill, BookBookmark, Activity, Share, BriefcaseMedical } from 'lucide-react-native';
-
+import AppIcon, { AppIconName } from './ui/app-icon';
 
 type HomeFeatureCardProps ={
-  iconname: keyof typeof icons;
+  icon: AppIconName;
   accessibilityLabel: string;
   name: string;
   description: string;
   link: Href;
 };
-
-const icons = {
-HomeLearn: BookBookmark, 
-HomeTrack: Activity,
-HomeHealth: BriefcaseMedical,
-HomeShare: Share,
-Treatment: Pill, 
-}
 
 const HomeFeatureCard = (props: HomeFeatureCardProps) => {
   return(
@@ -33,7 +23,7 @@ const HomeFeatureCard = (props: HomeFeatureCardProps) => {
               >
                 <View className="w-full flex-row items-center justify-between px-4">
                 <AppIcon 
-                  iconname= {props.iconname}
+                  icon = {props.icon}
                   size={24}
                   color={'#3F6F86'}
                   strokeWidth={2}
@@ -63,7 +53,7 @@ const HomeFeatureCard = (props: HomeFeatureCardProps) => {
                     </Text>
                   </View>
                   <AppIcon
-                    iconname="arrow"
+                    icon="arrow"
                     size={25}
                     color={'#17395D'}
                     strokeWidth={2}

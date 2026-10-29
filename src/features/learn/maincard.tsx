@@ -1,6 +1,6 @@
 import { Pressable, Text, View, Image, ImageSourcePropType, ImageBackground, StyleSheet} from 'react-native';
 import { router, Href } from 'expo-router';
-import AppIcon from '@/components/ui/AppIcon';
+import AppIcon from '@/components/ui/app-icon';
 
 type MainCardProps ={
   background: ImageSourcePropType;
@@ -48,7 +48,7 @@ const MainCard = (props: MainCardProps) => {
                     style={{right:15, bottom:15}}
                 >
                     <AppIcon
-                        iconname="arrow"
+                        icon="arrow"
                         size={25}
                         color={'#17395D'}
                         strokeWidth={2}

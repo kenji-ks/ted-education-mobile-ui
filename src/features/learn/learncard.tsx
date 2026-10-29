@@ -1,6 +1,6 @@
 import { Pressable, Text, View, Image, ImageSourcePropType } from 'react-native';
 import { router, Href } from 'expo-router';
-import AppIcon from '@/components/ui/AppIcon';
+import AppIcon from '@/components/ui/app-icon';
 
 type LearnCardProps ={
   thumbnail: ImageSourcePropType;

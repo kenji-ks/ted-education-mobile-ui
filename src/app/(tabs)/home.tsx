@@ -29,35 +29,35 @@ return (
                 Learn. Track. Organize. Understand. {'\n'}Take control of your eye health.
               </Text>
               <HomeFeatureCard
-                iconname="HomeLearn"
+                icon="HomeLearn"
                 name="Learn"
                 accessibilityLabel="Learn"
                 description="Helpful education & resources to guide you in understanding TED."
                 link="/(tabs)/learn"
               />
               <HomeFeatureCard
-                iconname="HomeTrack"
+                icon="HomeTrack"
                 name="Track"
                 accessibilityLabel="Track"
                 description="Track symptoms, CAS assessments and photos."
                 link="/(tabs)/track"
               />
               <HomeFeatureCard
-                iconname="HomeHealth"
+                icon="HomeHealth"
                 name="My Health"
                 accessibilityLabel="My Health"
                 description="Organize labs, medications, imaging, treatment history, and health records."
                 link="/(tabs)/health"
               />
               <HomeFeatureCard
-                iconname="HomeShare"
+                icon="HomeShare"
                 name="Share With My Doctor"
                 accessibilityLabel="Share With My Doctor"
                 description="Prepare health information to share with your doctor."
                 link="/share"
               />
               <HomeFeatureCard
-                iconname="Treatment"
+                icon="Treatment"
                 name="Treatment"
                 accessibilityLabel="Treatment"
                 description="Find treatments and other guidance for TED."
