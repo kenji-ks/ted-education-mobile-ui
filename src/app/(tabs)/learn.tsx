@@ -25,7 +25,7 @@ export default function LearnScreen() {
                                         className="h-10 w-10 items-center justify-center"
                                     >
                                         <AppIcon
-                                            iconname='back'
+                                            icon='back'
                                             color='#17395D'
                                             size={30}
                                             strokeWidth={2}
@@ -48,7 +48,7 @@ export default function LearnScreen() {
                                         className="h-10 w-10 items-center justify-center"
                                     >
                                         <AppIcon
-                                            iconname='search'
+                                            icon='search'
                                             size={25}
                                             color='#17395D'
                                             strokeWidth={2}

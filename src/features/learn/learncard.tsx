@@ -53,7 +53,7 @@ const LearnCard = (props: LearnCardProps) => {
                     </Text>
                   </View>
                   <AppIcon
-                    iconname="arrow"
+                    icon="arrow"
                     size={25}
                     color={'#17395D'}
                     strokeWidth={2}

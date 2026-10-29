@@ -61,7 +61,7 @@ return (
 
               <View className="ml-1">
                 <AppIcon 
-                  iconname='arrow'
+                  icon='arrow'
                   size={25}
                   color={'white'}
                   strokeWidth={2}
