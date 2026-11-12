@@ -7,6 +7,8 @@ import AppIcon from '@/components/ui/app-icon';
 import { TextData } from '@/features/learn/data/ArticleText';
 import NextCard from '@/features/learn/nextcard';
 import { Articles } from './data/Articles';
+import KeywordTabs from './keywordtabs';
+import * as Linking from 'expo-linking';
 
 type ArticleProps = {
     article: TextData;
@@ -51,10 +53,23 @@ export default function ArticleFormat({ article }: ArticleProps) {
                                 >
                                     {article.header}
                                 </Text>
+                                <View className="flex-row items-center">
+                                <Text
+                                    className="text-left text-[20px]"
+                                    style={{
+                                        fontFamily: 'Georgia',
+                                        fontWeight: '300',
+                                        color: '#17395D',
+                                    }}
+                                >
+                                    Tags:
+                                </Text>
+                                <KeywordTabs keywords={article.keywords} />
+                                </View>
                                 {article.paragraphs.map((paragraph, id) => (
                                     <Text
                                         key={id}
-                                        className="flex-1 text-[18px] mb-5"
+                                        className="flex-1 text-[15px] mt-5"
                                         style={{
                                             fontFamily: 'Georgia',
                                             fontWeight: '300',
@@ -63,8 +78,8 @@ export default function ArticleFormat({ article }: ArticleProps) {
                                         {paragraph}
                                     </Text>
                                 ))}
-                                <View className="mb-5"></View>
-                                {nextkey != 6 && nextarticle && (
+                                <View className="mb-10"></View>
+                                {nextkey !== 6 && nextarticle && (
                                     <NextCard
                                         key={nextarticle.key}
                                         thumbnail={nextarticle.thumbnail}

@@ -3,11 +3,6 @@ import { ArticleText } from '@/features/learn/data/ArticleText';
 
 export default function whatScreen() {
     return (
-        <ArticleFormat article={{
-            header: ArticleText[0].header,
-            paragraphs: ArticleText[0].paragraphs,
-            key: 1,
-        }}
-        />
+        <ArticleFormat article={ArticleText[0]} />
     );
 }

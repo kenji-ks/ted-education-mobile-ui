@@ -8,6 +8,7 @@ export interface ArticleData {
     name: string;
     description: string;
     link: Href;
+    tags: string[];
 };
 
 export const Articles: ArticleData[] = [
@@ -17,7 +18,8 @@ export const Articles: ArticleData[] = [
         name: "What is TED?",
         accessibilityLabel: "What is TED?",
         description: "Helpful information about TED.",
-        link: "/whatisted"
+        link: "/whatisted",
+        tags: ["Common", "Symptoms", "Risk Factors", "Active", "Inactive"],
     },
     {
         key: 2,
@@ -25,7 +27,8 @@ export const Articles: ArticleData[] = [
         name: "Lifestyle Considerations",
         accessibilityLabel: "Lifestyle Considerations",
         description: "Lifestyle considerations for TED patients.",
-        link: "/lifestyle"
+        link: "/lifestyle",
+        tags: ["Smoking", "Stress", "Exercise"],
     },
     {
         key: 3,
@@ -33,7 +36,8 @@ export const Articles: ArticleData[] = [
         name: "TED Support Groups",
         accessibilityLabel: "TED Support Groups",
         description: "Find support groups for TED patients.",
-        link: "/tedsupport"
+        link: "/tedsupport",
+        tags: ["Community", "Awareness", "Foundation", "Organizations"],
     },
     {
         key: 4,
@@ -41,7 +45,8 @@ export const Articles: ArticleData[] = [
         name: "Treatment Options",
         accessibilityLabel: "Treatment Options",
         description: "Find treatments and medications for TED.",
-        link: "/treatment"
+        link: "/treatment",
+        tags: ["Supplements", "Medications", "Surgery", "Therapy", "Injections"],
     },
     {
         key: 5,
@@ -49,6 +54,7 @@ export const Articles: ArticleData[] = [
         name: "Specialties Treating TED",
         accessibilityLabel: "TED Specialists",
         description: "Find specialists treating TED.",
-        link: "/tedspecialist"
+        link: "/tedspecialist",
+        tags: ["Endocrinologists", "Specialists", "Oncologists", "Surgeons", "Plastic Surgeons"],
     },
 ];

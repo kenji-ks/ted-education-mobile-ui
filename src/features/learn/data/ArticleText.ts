@@ -1,6 +1,7 @@
 
 export interface TextData {
     header: string;
+    keywords: string[];
     paragraphs: string[];
     key: number;
 };
@@ -8,10 +9,11 @@ export interface TextData {
 export const ArticleText: TextData[] = [
     {
         header: "What is TED?",
+        keywords: ["Common", "Symptoms", "Risk Factors", "Active", "Inactive"],
         paragraphs: [
             "Thyroid Eye Disease (TED) is an autoimmune condition where the body’s immune system mistakenly attacks and causes inflammation of the muscles and fat around your eyes. This can affect the way your eyes appear, feel, and move.",
             "TED commonly occurs in people who have a history of Graves Disease (hyperthyroidism), though it can also occur in those with Hashimoto’s disease (hypothyroidism) or even those with normal levels.",
-            "Common Symptoms include:\n\tBulging eyes (Proptosis)\n\tDry Eyes\n\tRedness or swelling of eyelid\n\tEyes that appear more open or retracted\n\tDouble vision\n\tPain or pressure behind eyes",
+            "Common Symptoms include:\n\t- Bulging eyes (Proptosis)\n\t- Dry Eyes\n\t- Redness or swelling of eyelid\n\t- Eyes that appear more open or retracted\n\t- Double vision\n\t- Pain or pressure behind eyes",
             "Some risk factors include:",
             "Active vs inactive:",
         ],
@@ -19,26 +21,32 @@ export const ArticleText: TextData[] = [
     },
     {
         header: "Lifestyle Considerations",
+        keywords: ["Smoking", "Stress", "Exercise"],
         paragraphs: [
             "Smoking cessation",
-            "Excercise and healthy diet",
+            "Exercise and healthy diet",
             "Stress management",
         ],
         key: 2,
     },
     {
         header: "TED Support Groups",
+        keywords: ["Community", "Awareness", "Foundation", "Organizations"],
         paragraphs: [
-            "Grave’s Disease and Thyroid Foundation (GDATF):\nhttps://gdatf.org/",
-            "TED Community Organization:\nhttps://tedcommunity.org/",
-            "Thyroid Eye Disease Awareness & Education Facebook Group:\nhttps://www.facebook.com/groups/1299531523518774/",
-            "Thyroid Eye Disease Facebook Page:\nhttps://www.facebook.com/ThyroidEyes/",
-
+            "Grave’s Disease and Thyroid Foundation (GDATF):",
+            "https://gdatf.org/",
+            "TED Community Organization:",
+            "https://tedcommunity.org/",
+            "Thyroid Eye Disease Awareness & Education Facebook Group:",
+            "https://www.facebook.com/groups/1299531523518774/",
+            "Thyroid Eye Disease Facebook Page:",
+            "https://www.facebook.com/ThyroidEyes/",
         ],
         key: 3,
     },
     {
         header: "Treatment Options",
+        keywords: ["Supplements", "Medications", "Surgery", "Therapy", "Injections"],
         paragraphs: [
             "Selenium Supplementation",
             "Thyroidectomy vs. Radioactive Iodine",
@@ -57,6 +65,7 @@ export const ArticleText: TextData[] = [
     },
     {
         header: "Specialties Treating TED",
+        keywords: ["Endocrinologists", "Specialists", "Oncologists", "Surgeons", "Plastic Surgeons"],
         paragraphs: [
             "Endoccrinologists:\nAnna Lo\nCindy Pau\nEric Lee\nAlan Parsa\nKamonkiat Wirunsawanya(HPH)",
             "Adult Strabismus Specialists:\nDavid Young\nRupa Wong\nPeggy Liao",

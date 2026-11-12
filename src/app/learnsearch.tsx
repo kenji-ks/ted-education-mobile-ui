@@ -12,7 +12,7 @@ export default function LearnSearchScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [submittedQuery, setSubmittedQuery] = useState('');
   const words = submittedQuery.toLowerCase().split(" ").filter(Boolean);
-  const matching = Articles.filter((article) => words.every((word) => [article.name, article.description].join(' ').toLowerCase().split(" ").some((wordbeg) => wordbeg.startsWith(word))));
+  const matching = Articles.filter((article) => words.every((word) => [article.name, article.description].concat(article.tags).join(' ').toLowerCase().split(" ").some((wordbeg) => wordbeg.startsWith(word))));
   return (
     <View className="flex-1 bg-white">
       <StatusBar style="dark" />
